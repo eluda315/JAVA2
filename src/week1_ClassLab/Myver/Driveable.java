@@ -9,11 +9,11 @@ public interface Driveable {
     
     // 매개변수가 있는 메소드 오버라이딩
     public default void drive(Vehicle v) {
-    	System.out.println("모든 Vehicle을 운전할 수 있습니다.");
+    	System.out.println("Vehicle을 운전합니다");
     	v.move();
     }
     public default void drive(Moveable m) {
-    	System.out.println("모든 Moveable한 것을 운전할 수 있습니다.");
+    	System.out.println("Moveable을 운전합니다");
     	m.move();
     }
 
