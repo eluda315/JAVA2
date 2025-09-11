@@ -86,7 +86,7 @@ public class Mywin extends JFrame {
 		contentPane.setLayout(null);
 
 		Label1 = new JLabel("");
-		Label1.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uB1781.jpg")));
+		Label1.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uB1781.jpg")));
 		Label1.setHorizontalAlignment(SwingConstants.CENTER);
 		Label1.setBounds(22, 44, 93, 136);
 		contentPane.add(Label1);
@@ -95,7 +95,7 @@ public class Mywin extends JFrame {
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					heroAttack(p1, Label1, "/image/노2.jpg", "/image/노3.jpg", "/image/노4.jpg", bar1,btn1,bar11);
+					heroAttack(p1, Label1, "/week2_BattleRefac/image/노2.jpg", "/week2_BattleRefac/image/노3.jpg", "/week2_BattleRefac/image/노4.jpg", bar1,btn1,bar11);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -112,7 +112,7 @@ public class Mywin extends JFrame {
 		contentPane.add(bar1);
 
 		Label2 = new JLabel("");
-		Label2.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uAD111.jpg")));
+		Label2.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uAD111.jpg")));
 		Label2.setHorizontalAlignment(SwingConstants.CENTER);
 		Label2.setBounds(146, 44, 93, 136);
 		contentPane.add(Label2);
@@ -121,7 +121,7 @@ public class Mywin extends JFrame {
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					heroAttack(p2, Label2, "/image/광2.jpg", "/image/광3.jpg", "/image/광4.jpg", bar2,btn2,bar22);
+					heroAttack(p2, Label2, "/week2_BattleRefac/image/광2.jpg", "/week2_BattleRefac/image/광3.jpg", "/week2_BattleRefac/image/광4.jpg", bar2,btn2,bar22);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -138,7 +138,7 @@ public class Mywin extends JFrame {
 		contentPane.add(bar2);
 
 		Label3 = new JLabel("");
-		Label3.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uC1311.jpg")));
+		Label3.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uC1311.jpg")));
 		Label3.setHorizontalAlignment(SwingConstants.CENTER);
 		Label3.setBounds(272, 44, 93, 136);
 		contentPane.add(Label3);
@@ -147,7 +147,7 @@ public class Mywin extends JFrame {
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					heroAttack(p3, Label3, "/image/성2.jpg", "/image/성3.jpg", "/image/성4.jpg", bar3,btn3,bar33);
+					heroAttack(p3, Label3, "/week2_BattleRefac/image/성2.jpg", "/week2_BattleRefac/image/성3.jpg", "/week2_BattleRefac/image/성4.jpg", bar3,btn3,bar33);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -164,7 +164,7 @@ public class Mywin extends JFrame {
 		contentPane.add(bar3);
 
 		Label4 = new JLabel("");
-		Label4.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uAE301.jpg")));
+		Label4.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uAE301.jpg")));
 		Label4.setHorizontalAlignment(SwingConstants.CENTER);
 		Label4.setBounds(398, 44, 93, 136);
 		contentPane.add(Label4);
@@ -173,7 +173,7 @@ public class Mywin extends JFrame {
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					heroAttack(p4, Label4, "/image/기2.jpg", "/image/기3.jpg", "/image/기4.jpg", bar4,btn4,bar44);
+					heroAttack(p4, Label4, "/week2_BattleRefac/image/기2.jpg", "/week2_BattleRefac/image/기3.jpg", "/week2_BattleRefac/image/기4.jpg", bar4,btn4,bar44);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -190,7 +190,7 @@ public class Mywin extends JFrame {
 		contentPane.add(bar4);
 
 		Label5 = new JLabel("");
-		Label5.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uBCD11.jpg")));
+		Label5.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uBCD11.jpg")));
 		Label5.setHorizontalAlignment(SwingConstants.CENTER);
 		Label5.setBounds(597, 44, 93, 136);
 		contentPane.add(Label5);
@@ -198,7 +198,7 @@ public class Mywin extends JFrame {
 		btn5 = new JButton("공격하기");
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				monsterAttack(p5, Label5, "/image/병2.jpg", bar5,btn5);
+				monsterAttack(p5, Label5, "/week2_BattleRefac/image/병2.jpg", bar5,btn5);
 			}
 		});
 		btn5.setBounds(597, 285, 93, 23);
@@ -211,7 +211,7 @@ public class Mywin extends JFrame {
 		contentPane.add(bar5);
 
 		Label6 = new JLabel("");
-		Label6.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uBCD11.jpg")));
+		Label6.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uBCD11.jpg")));
 		Label6.setHorizontalAlignment(SwingConstants.CENTER);
 		Label6.setBounds(723, 44, 93, 136);
 		contentPane.add(Label6);
@@ -219,7 +219,7 @@ public class Mywin extends JFrame {
 		btn6 = new JButton("공격하기");
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				monsterAttack(p6, Label6, "/image/병2.jpg", bar6,btn6);
+				monsterAttack(p6, Label6, "/week2_BattleRefac/image/병2.jpg", bar6,btn6);
 			}
 		});
 		btn6.setBounds(723, 285, 93, 23);
@@ -232,7 +232,7 @@ public class Mywin extends JFrame {
 		contentPane.add(bar6);
 
 		Label7 = new JLabel("");
-		Label7.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uBCF41.jpg")));
+		Label7.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uBCF41.jpg")));
 		Label7.setHorizontalAlignment(SwingConstants.CENTER);
 		Label7.setBounds(849, 44, 93, 136);
 		contentPane.add(Label7);
@@ -246,14 +246,14 @@ public class Mywin extends JFrame {
 		btn7 = new JButton("공격하기");
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				monsterAttack(p7, Label7, "/image/보2.jpg", bar7,btn7);
+				monsterAttack(p7, Label7, "/week2_BattleRefac/image/보2.jpg", bar7,btn7);
 			}
 		});
 		btn7.setBounds(849, 285, 93, 23);
 		contentPane.add(btn7);
 
 		Label8 = new JLabel("");
-		Label8.setIcon(new ImageIcon(Mywin.class.getResource("/image/\uC11D1.jpg")));
+		Label8.setIcon(new ImageIcon(Mywin.class.getResource("/week2_BattleRefac/image/\uC11D1.jpg")));
 		Label8.setHorizontalAlignment(SwingConstants.CENTER);
 		Label8.setBounds(974, 44, 93, 136);
 		contentPane.add(Label8);
@@ -267,7 +267,7 @@ public class Mywin extends JFrame {
 		btn8 = new JButton("공격하기");
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				monsterAttack(p8, Label8, "/image/석2.jpg", bar8,btn8);
+				monsterAttack(p8, Label8, "/week2_BattleRefac/image/석2.jpg", bar8,btn8);
 			}
 		});
 		btn8.setBounds(974, 285, 93, 23);

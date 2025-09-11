@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 
 import week2_BattleRefac.view.Mywin;
 import week2_BattleRefac.util.GetRan;
+import week2_BattleRefac.util.PrintSen;
 
 
 public class Player implements Attackable {
@@ -35,18 +36,14 @@ public class Player implements Attackable {
 
     public void attack(Player target){
     	if(GetRan.hundred()<(this.accuracy-target.dodge)) {
-    		Mywin.ta.append("공격이 성공했습니다!\n");
-    		System.out.println("공격이 성공했습니다!");
+    		PrintSen.printSen("공격이 성공했습니다!\n");
+
     		
     		target.hp-=(this.power-target.protection+GetRan.six());
-    		String str = this.name +"의 공격이" + target.name+ "에게"+(this.power-target.protection+GetRan.six())+"만큼의 데미지를 입혔습니다!\n";
-			System.out.printf(str);
-			Mywin.ta.append(str);
+			PrintSen.printSen(this.name +"의 공격이" + target.name+ "에게"+(this.power-target.protection+GetRan.six())+"만큼의 데미지를 입혔습니다!\n");
     	}
     	else {
-    		String str = "공격이 빗나갔습니다!\n";
-    		System.out.print(str);
-			Mywin.ta.append(str);
+    		PrintSen.printSen("공격이 빗나갔습니다!\n");
     	}
     }
     
