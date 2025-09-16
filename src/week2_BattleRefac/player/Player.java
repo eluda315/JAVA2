@@ -34,57 +34,41 @@ public class Player implements Attackable {
     	this.accuracy =accuracy; // 적중
     	}
 
-    public void attack(Player target){
-    	if(GetRan.hundred()<(this.accuracy-target.dodge)) {
+    public boolean attack(Player target){
+    	if(GetRan.ranNum(100)<(this.accuracy-target.dodge)) {
     		PrintSen.printSen("공격이 성공했습니다!\n");
-
-    		
-    		target.hp-=(this.power-target.protection+GetRan.six());
-			PrintSen.printSen(this.name +"의 공격이" + target.name+ "에게"+(this.power-target.protection+GetRan.six())+"만큼의 데미지를 입혔습니다!\n");
-    	}
-    	else {
+    		int r=GetRan.ranNum(6);
+    		target.hp-=(this.power-target.protection+r);
+			PrintSen.printSen(this.name +"의 공격이" + target.name+ "에게"+(this.power-target.protection+r)+"만큼의 데미지를 입혔습니다!\n");
+			return true;
+    	} else {
     		PrintSen.printSen("공격이 빗나갔습니다!\n");
+    		return false;
     	}
     }
     
     // Mywin에서 Monster 객체의 playerStress()가 호출되는 방식.
-    // 일단 그대로 두기.
     public void playerStress(Player pl,JLabel Label,String image1, String image2) {
     	if(pl.stress>=25&&stressCount==0) {
-    		System.out.println("영웅이 고통의 굴림에 빠졌습니다...");
-    		String str = "영웅이 고통의 굴림에 빠졌습니다...\n";
-			Mywin.ta.append(str);
-    		int r=(int) (Math.random() * 1000) % 4;
+    		PrintSen.printSen("영웅이 고통의 굴림에 빠졌습니다...\n");
     		
-    		
-    		if(r==0) {
+    		if(GetRan.ranNum(4)==0) {
     			Label.setIcon(new ImageIcon(Mywin.class.getResource(image2)));
-    			System.out.println("영웅의 기상에 돌입합니다!");
-    			str = "영웅의 기상에 돌입합니다!\n";
-    			Mywin.ta.append(str);
+    			PrintSen.printSen("영웅의 기상에 돌입합니다!\n");
     			pl.power+=2;
-    			System.out.println("power가 2만큼 증가합니다!");
-    			str = "power가 2만큼 증가합니다!\n";
-    			Mywin.ta.append(str);
+    			PrintSen.printSen("power가 2만큼 증가합니다!\n");
     			pl.stress=0;
-    			
     		}
     		else {
     			Label.setIcon(new ImageIcon(Mywin.class.getResource(image1)));
     			stressCount++;
-    			System.out.println("영웅이 붕괴합니다..");
-    			str = "영웅이 붕괴합니다..\n";
-    			Mywin.ta.append(str);
+    			PrintSen.printSen("영웅이 붕괴합니다..\n");
     			pl.dodge-=10;
-    			System.out.println("dodge가 10만큼 감소합니다..");
-    			str = "dodge가 10만큼 감소합니다..\n";
-    			Mywin.ta.append(str);
+    			PrintSen.printSen("dodge가 10만큼 감소합니다..\n");
     		}
     	}
     	if(pl.stress>=50&&stressCount==1) {
-    		System.out.println("스트레스가 50이 되어 영웅이 심장마비로 죽습니다.");
-    		String str = "스트레스가 50이 되어 영웅이 심장마비로 죽습니다.\n";
-			Mywin.ta.append(str);
+    		PrintSen.printSen("스트레스가 50이 되어 영웅이 심장마비로 죽습니다.\n");
     		pl.hp=0;
     	}
     }

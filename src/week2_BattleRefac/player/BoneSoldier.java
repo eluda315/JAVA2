@@ -16,8 +16,9 @@ public class BoneSoldier extends Monster {
     	PrintSen.printSen("BoneSoldier가 칼을 휘두릅니다!\n");
     }
 
-    public void attack(Player target){
+    public boolean attack(Player target){
     	this.묘지가르기(target);
-		super.attack(target);
+		boolean result = super.attack(target);
+		return result;
 	 }
 }

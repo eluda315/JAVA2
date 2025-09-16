@@ -15,8 +15,9 @@ public class Crusader extends Heroes {
     public void 강타(Player target){
     	PrintSen.printSen("Crusader가 검으로 내리칩니다!\n");
     }
-    public void attack(Player target){
+    public boolean attack(Player target){
     	this.강타(target);
-    	super.attack(target);
+    	boolean result = super.attack(target);
+    	return result;
     }
 }

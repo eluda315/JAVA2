@@ -13,16 +13,17 @@ public class Vestal extends Heroes {
     public void 신성한위무(Player target){
     	PrintSen.printSen("Vestal이 영웅을 치료합니다!\n");
     }
-    public void attack(Player target){
+    public boolean attack(Player target){
     	this.신성한위무(target);
-    	if(GetRan.hundred()<this.accuracy) {
+    	if(GetRan.ranNum(100)<this.accuracy) {
     		PrintSen.printSen("치료가 성공했습니다!\n");
-    		
-    		target.hp+=GetRan.six();
-    		PrintSen.printSen(GetRan.six()+"만큼 치료되었습니다!\n");
+    		int r = GetRan.ranNum(6);
+    		target.hp+=r;
+    		PrintSen.printSen(r+"만큼 치료되었습니다!\n");
+    		return true;
     	} else {
     		PrintSen.printSen("치료가 실패했습니다!\n");
+    		return false;
     	}
     }
-
 }

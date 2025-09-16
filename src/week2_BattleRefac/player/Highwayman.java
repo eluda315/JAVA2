@@ -15,10 +15,10 @@ public class Highwayman extends Heroes {
 	public void 권총사격(Player target){
     	PrintSen.printSen("Highwayman 이 총을 쐈습니다!\n");
     }
-	 public void attack(Player target){
+	 public boolean attack(Player target){
 		 this.권총사격(target);
-		 super.attack(target);
-		 
+		 boolean result = super.attack(target);
+		 return result;
 	 }
 
 }

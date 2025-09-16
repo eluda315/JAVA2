@@ -15,9 +15,10 @@ public class BoneArbalest extends Monster {
     public void 쇠뇌발사(Player target){
     	PrintSen.printSen("BoneArbalest가 화살을 쏩니다!\n");
     }
-    public void attack(Player target){
+    public boolean attack(Player target){
     	this.쇠뇌발사(target);
-    	super.attack(target);
+    	boolean result = super.attack(target);
+    	return result;
     }
 
 }

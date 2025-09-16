@@ -14,16 +14,18 @@ public class Jester extends Heroes {
 		PrintSen.printSen("Jester가 연주를 합니다: 띠로로로롱띠로로로롱~~\n");
     }
     
-    public void attack(Player target){
+    public boolean attack(Player target){
     	this.격려의선율(target);
-    	if(GetRan.hundred()<this.accuracy) {
+    	if(GetRan.ranNum(100)<this.accuracy) {
     		PrintSen.printSen("연주가 성공했습니다!\n");
-    		
-    		target.stress-=GetRan.ten();
-			PrintSen.printSen(GetRan.ten()+"만큼 스트레스가 감소되었습니다!\n");
+    		int r= GetRan.ranNum(10);
+    		target.stress-=r;
+			PrintSen.printSen(r+"만큼 스트레스가 감소되었습니다!\n");
+			return true;
     	}
     	else {
     		PrintSen.printSen("연주가 실패했습니다!\n");
+    		return false;
     	}
     }
 }
