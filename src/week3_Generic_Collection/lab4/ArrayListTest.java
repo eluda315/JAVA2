@@ -32,7 +32,7 @@ public class ArrayListTest {
 		while(iter.hasPrevious()) {
 		    System.out.println(iter.previous());
 		}
-		// 2. 순회하면서 수정해보기
+		// 2. 순회하면서 수정해보기(이것도 물어보자.)
 	}
 
 }

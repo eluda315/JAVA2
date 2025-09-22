@@ -6,7 +6,6 @@ import java.util.List;
 abstract class Animal {
 	abstract void speak();
 }
-
 class Dog extends Animal {
 	void speak() {
 		System.out.print("멍");
@@ -23,13 +22,14 @@ public class Main {
 	static void makeAnimalsSpeak(List<? extends Animal> animals) {
 		for(Animal a:animals) {
 			a.speak();
+			//a.add(new Dog());
 		}
 		System.out.println("\n---------------------");
 	}
-	
 	static <T> void copyAnimals(List<? extends T> src, List<? super T> dest) {
 		for(T animal : src) {
 			dest.add(animal);
+			//dest.speak();
 		}
 	}
 
@@ -42,8 +42,11 @@ public class Main {
 		List<Cat> cats = List.of(new Cat(), new Cat(), new Cat());
 		copyAnimals(dogs, animals);
 		copyAnimals(cats, animals);
+		//copyAnimals(animals, cats);
+		// 에러인 이유
+		// 첫 번째 인자 T 타입 추론: Animal or Object
+		// 두 번째 인자 T 타입 추론: Cat or Cat의 자식
+		// 하나의 공통적인 T 타입이 없음 -> 에러!
 		makeAnimalsSpeak(animals);
-
 	}
-
 }
